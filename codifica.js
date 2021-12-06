@@ -14,9 +14,9 @@ var selecaoCod = document.addEventListener("click", function () {
 
 var radio = document.querySelectorAll(".radio");
 var botao = document.getElementById("botaoResultado");
-var resultado = document.getElementById("resultado");
-var chave = document.getElementById("chave");
 var mensagem = document.getElementById("mensagem");
+var chave = document.getElementById("chave");
+var resultado = document.getElementById("resultado");
 
 botao.addEventListener("click", function (event) {
   event.preventDefault();
@@ -24,14 +24,48 @@ botao.addEventListener("click", function (event) {
   if (codigo == "cesar" && radio[0].checked) {
     var valorMsg = mensagem.value.split("");
     var valorChave = parseInt(chave.value);
-    mensagem = codificar(valorMsg, valorChave);
+    resultado.value = codificarCesar(valorMsg, valorChave);
   } else if (codigo == "cesar" && radio[1].checked) {
     var valorMsg = mensagem.value.split("");
     var valorChave = parseInt(chave.value);
-    mensagem = decodificar(valorMsg, valorChave);
+    resultado.value = decodificarCesar(valorMsg, valorChave);
   } else if (codigo == "base64" && radio[0].checked) {
     alert("codificou");
   } else {
     alert("decodificou");
   }
 });
+
+//função codificar Cifra de Cesar
+
+function codificarCesar(msg, chave) {
+  return msg
+    .map((str) => {
+      var entrada = str.charCodeAt();
+      if (entrada >= 65 && entrada <= 90) {
+        return String.fromCharCode(((entrada - 65 + chave) % 26) + 65);
+      } else if (entrada >= 97 && entrada <= 122) {
+        return String.fromCharCode(((entrada - 97 + chave) % 26) + 97);
+      } else {
+        return str;
+      }
+    })
+    .join("");
+}
+
+//função decodificar Cifra de Cesar
+
+function decodificarCesar(msg, chave) {
+  return msg
+    .map((str) => {
+      var entrada = str.charCodeAt();
+      if (entrada >= 65 && entrada <= 90) {
+        return String.fromCharCode(((entrada - 65 - chave) % 26) + 65);
+      } else if (entrada >= 97 && entrada <= 122) {
+        return String.fromCharCode(((entrada - 97 - chave) % 26) + 97);
+      } else {
+        return str;
+      }
+    })
+    .join("");
+}
