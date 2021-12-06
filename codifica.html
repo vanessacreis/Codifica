@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./codifica.css" />
+    <link rel="icon" type="image/x-icon" href="./imagens/1111.png" />
+    <title>Codifica</title>
+  </head>
+  <body>
+    <main class="container">
+      <h1>
+        C<span class="corvermelha">0</span>dif<span class="corvermelha">1</span
+        >ca
+      </h1>
+      <form>
+        <label for="mensagem">Insira a mensagem:</label>
+        <textarea id="mensagem" cols="80" rows="10"></textarea>
+
+        <fieldset>
+          <label for="codigo">Escolha o tipo de código</label>
+          <select name="codigo" id="codigo">
+            <option value="" disabled selected>Selecione</option>
+            <option value="cesar">Cifra de César</option>
+            <option value="base64">Base 64</option>
+          </select>
+        </fieldset>
+
+        <div class="divChave">
+          <label for="chave">Insira o incremento:</label>
+          <input type="number" id="chave" />
+        </div>
+
+        <fieldset class="radioCod">
+          <p>Você deseja:</p>
+          <input type="radio" name="cod" class="radio" checked />
+          <label for="codificar">Codificar</label>
+
+          <input type="radio" name="cod" class="radio" />
+          <label for="decodificar">Decodificar</label>
+        </fieldset>
+
+        <fieldset>
+          <label for="resultado">Resultado</label>
+          <textarea
+            name="resultado"
+            id="resultado"
+            cols="80"
+            rows="10"
+            readonly
+          ></textarea>
+        </fieldset>
+
+        <button id="botaoResultado" onclick=""><p></p></button>
+      </form>
+    </main>
+    <footer>
+      <p>© 2021. Desenvolvido para fins didáticos</p>
+    </footer>
+
+    <script src="./codifica.js"></script>
+  </body>
+</html>
