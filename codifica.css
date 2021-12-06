@@ -16,7 +16,7 @@ body {
 
 .container {
   width: 55%;
-  height: calc(100% - 35px - 35px);
+  height: calc(100% - 35px);
   background-color: #f9f6f6;
   border-radius: 25px;
   margin: 25px;
