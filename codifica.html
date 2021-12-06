@@ -33,17 +33,17 @@
           </select>
         </fieldset>
 
-        <div class="divChave">
+        <fieldset class="divChave">
           <label for="chave">Insira o incremento:</label>
           <input type="number" id="chave" />
-        </div>
+        </fieldset>
 
         <fieldset class="radioCod">
           <p>Você deseja:</p>
-          <input type="radio" name="cod" class="radio" checked />
+          <input type="radio" name="cod" class="radio" id="cod" checked />
           <label for="codificar">Codificar</label>
 
-          <input type="radio" name="cod" class="radio" />
+          <input type="radio" name="cod" class="radio" id="decod" />
           <label for="decodificar">Decodificar</label>
         </fieldset>
 
@@ -58,7 +58,7 @@
           ></textarea>
         </fieldset>
 
-        <button id="botaoResultado" onclick=""><p></p></button>
+        <button id="botaoResultado" onclick=""><p>Resultado</p></button>
       </form>
     </main>
     <footer>
