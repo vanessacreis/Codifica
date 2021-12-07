@@ -30,9 +30,11 @@ botao.addEventListener("click", function (event) {
     var valorChave = parseInt(chave.value);
     resultado.value = decodificarCesar(valorMsg, valorChave);
   } else if (codigo == "base64" && radio[0].checked) {
-    alert("codificou");
+    var valorMsg = mensagem.value;
+    resultado.value = btoa(valorMsg);
   } else {
-    alert("decodificou");
+    var valorMsg = mensagem.value;
+    resultado.value = atob(valorMsg);
   }
 });
 
@@ -69,3 +71,4 @@ function decodificarCesar(msg, chave) {
     })
     .join("");
 }
+
