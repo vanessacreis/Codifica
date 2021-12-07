@@ -72,3 +72,18 @@ function decodificarCesar(msg, chave) {
     .join("");
 }
 
+radio[0].addEventListener("click", function () {
+  if (radio[0].checked) {
+    botao.innerHTML = `
+      C<span class="corvermelha">0</span>dif<span class="corvermelha">1</span>car
+      `;
+  }
+});
+
+radio[1].addEventListener("click", function () {
+  if (radio[1].checked) {
+    botao.innerHTML = `
+      Dec<span class="corvermelha">0</span>dif<span class="corvermelha">1</span>car
+      `;
+  }
+});
