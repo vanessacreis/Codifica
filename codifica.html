@@ -22,24 +22,20 @@
       </h1>
       <form>
         <label for="mensagem">Insira a mensagem:</label>
-        <textarea id="mensagem" cols="80" rows="10"></textarea>
+        <textarea id="mensagem" cols="10" rows="4"></textarea>
 
-        <fieldset>
-          <label for="codigo">Escolha o tipo de código</label>
-          <select name="codigo" id="codigo">
-            <option value="" disabled selected>Selecione</option>
-            <option value="cesar">Cifra de César</option>
-            <option value="base64">Base 64</option>
-          </select>
-        </fieldset>
+        <select name="codigo" id="codigo">
+          <option value="" disabled selected>Selecione o tipo de código</option>
+          <option value="cesar">Cifra de César</option>
+          <option value="base64">Base 64</option>
+        </select>
 
         <fieldset class="divChave">
           <label for="chave">Insira o incremento:</label>
-          <input type="number" id="chave" min="1" max="26" />
+          <input type="number" id="chave" value="1" max="26" />
         </fieldset>
 
         <fieldset class="radioCod">
-          <p>Você deseja:</p>
           <div class="divRadio">
             <input type="radio" name="cod" class="radio" id="cod" />
             <label for="codificar">Codificar</label>
@@ -52,12 +48,12 @@
         </fieldset>
 
         <fieldset>
-          <label for="resultado">Resultado</label>
+          <label for="resultado">Resultado:</label>
           <textarea
             name="resultado"
             id="resultado"
-            cols="80"
-            rows="10"
+            cols="10"
+            rows="4"
             readonly
           ></textarea>
         </fieldset>
