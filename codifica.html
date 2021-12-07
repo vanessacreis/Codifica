@@ -35,16 +35,20 @@
 
         <fieldset class="divChave">
           <label for="chave">Insira o incremento:</label>
-          <input type="number" id="chave" />
+          <input type="number" id="chave" min="1" max="26" />
         </fieldset>
 
         <fieldset class="radioCod">
           <p>Você deseja:</p>
-          <input type="radio" name="cod" class="radio" id="cod" checked />
-          <label for="codificar">Codificar</label>
+          <div class="divRadio">
+            <input type="radio" name="cod" class="radio" id="cod" />
+            <label for="codificar">Codificar</label>
+          </div>
 
-          <input type="radio" name="cod" class="radio" id="decod" />
-          <label for="decodificar">Decodificar</label>
+          <div class="divRadio">
+            <input type="radio" name="cod" class="radio" id="decod" />
+            <label for="decodificar">Decodificar</label>
+          </div>
         </fieldset>
 
         <fieldset>
@@ -62,7 +66,10 @@
           <p>
             C<span class="corvermelha">0</span>dif<span class="corvermelha"
               >1</span
-            >car
+            >car ou Dec<span class="corvermelha">0</span>dif<span
+              class="corvermelha"
+              >1</span
+            >car?
           </p>
         </button>
       </form>
