@@ -16,10 +16,10 @@ body {
 
 .container {
   width: 60%;
-  height: calc(100% - 35px);
+  height: calc(90% - 35px);
   background-color: #f9f6f6;
   border-radius: 25px;
-  margin: 25px;
+  margin: 20px;
   padding: 25px;
   align-items: center;
   justify-content: center;
@@ -50,7 +50,7 @@ fieldset {
 select {
   width: 100%;
   margin: 10px 0;
-  padding: 15px;
+  padding: 12px;
   border: 1px solid #89a39b;
   border-radius: 10px;
   font-family: "Poppins", sans-serif;
@@ -61,7 +61,7 @@ textarea {
   width: 100%;
   height: 90px;
   margin: 10px 0;
-  padding: 15px;
+  padding: 12px;
   border: 1px solid #89a39b;
   border-radius: 10px;
   font-family: "Poppins", sans-serif;
@@ -75,18 +75,19 @@ textarea {
 .divChave input {
   width: 100%;
   margin: 10px 0;
-  padding: 15px;
+  padding: 12px;
   border: 1px solid #89a39b;
   border-radius: 10px;
   font-family: "Poppins", sans-serif;
   font-size: 15px;
+  text-align: center;
 }
 
 .radioCod {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 15px 0;
+  justify-content: space-around;
+  padding: 12px 0;
 }
 
 .divRadio {
