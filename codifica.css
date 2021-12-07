@@ -28,7 +28,7 @@ body {
 h1 {
   color: #363636;
   font-size: 35px;
-  font-weight: 700;
+  font-weight: 400;
   margin: 15px;
   text-transform: uppercase;
   text-align: end;
@@ -59,7 +59,7 @@ select {
 
 textarea {
   width: 100%;
-  height: 120px;
+  height: 90px;
   margin: 10px 0;
   padding: 15px;
   border: 1px solid #89a39b;
@@ -93,13 +93,12 @@ textarea {
   width: 100%;
   height: 40px;
   border: 1px solid #89a39b;
-  box-shadow: 3px 3px #89a39b;
+  box-shadow: 2px 3px tomato;
   border-radius: 10px;
   font-family: "Poppins", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   text-transform: uppercase;
-  color: tomato;
-  font-weight: 400;
+  font-weight: 300;
   cursor: pointer;
 }
 
