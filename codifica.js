@@ -62,9 +62,17 @@ function decodificarCesar(msg, chave) {
     .map((str) => {
       var entrada = str.charCodeAt();
       if (entrada >= 65 && entrada <= 90) {
-        return String.fromCharCode(((entrada - 65 - chave) % 26) + 65);
+        if (entrada - 65 - chave < 0) {
+          return String.fromCharCode(((entrada - 65 - chave + 26) % 26) + 65);
+        } else {
+          return String.fromCharCode(((entrada - 65 - chave) % 26) + 65);
+        }
       } else if (entrada >= 97 && entrada <= 122) {
-        return String.fromCharCode(((entrada - 97 - chave) % 26) + 97);
+        if (entrada - 97 - chave < 0) {
+          return String.fromCharCode(((entrada - 97 - chave + 26) % 26) + 97);
+        } else {
+          return String.fromCharCode(((entrada - 97 - chave) % 26) + 97);
+        }
       } else {
         return str;
       }
@@ -72,6 +80,7 @@ function decodificarCesar(msg, chave) {
     .join("");
 }
 
+//eventListener para alterar testo do botão de acordo com o selecionado
 radio[0].addEventListener("click", function () {
   if (radio[0].checked) {
     botao.innerHTML = `
